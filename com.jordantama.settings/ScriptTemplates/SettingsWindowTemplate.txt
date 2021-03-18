@@ -1,0 +1,17 @@
+﻿using UnityEditor;
+
+public class #SCRIPTNAME# : Settings.SettingsWindow
+{
+    protected override string WindowTitle() => "#SETTINGSNAME#";
+
+    [MenuItem("Settings/#SCRIPTNAME#")]
+    protected static void ShowWindow() => DisplayWindow<#SCRIPTNAME#>();
+
+    private void OnGUI()
+    {
+        Editor editor = Editor.CreateEditor(#SETTINGSNAME#.Instance);
+        editor.OnInspectorGUI();
+
+        DestroyImmediate(editor);
+    }
+}

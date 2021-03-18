@@ -1,0 +1,8 @@
+﻿using Settings;
+
+public abstract class #SCRIPTNAME# : Settings<#TYPE#>
+{
+    // --- Place public static getters for 'Instance' parameters here
+    #NOTRIM#
+    // ---
+}

@@ -1,0 +1,30 @@
+﻿using Settings;
+using UnityEngine;
+
+public class #SCRIPTNAME# : SettingsType
+{
+    // --- Place private serializable member variables here
+    #NOTRIM#
+    // ---
+    
+    
+    // --- Place public getters for member variables here
+    #NOTRIM#
+    // ---
+    
+    
+    public override string DataPath()
+    {
+        return Application.dataPath;
+    }
+
+    public override string InstanceDirectory()
+    {
+        return "Settings/";
+    }
+
+    protected override string InstanceFileName()
+    {
+        return "#SETTINGSNAME#Instance";
+    }
+}

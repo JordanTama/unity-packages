@@ -1,0 +1,19 @@
+{
+  "name": "com.jordantama.settings",
+  "version": "1.0.0",
+  "displayName": "Settings",
+  "description": "This is an example package",
+  "unity": "2019.4",
+  "unityRelease": "21f1",
+  "dependencies": {},
+  "keywords": [
+    "settings",
+    "editor",
+    "singleton"
+  ],
+  "author": {
+    "name": "Jordan Hamlin",
+    "email": "Jordan.Hamlin6@gmail.com",
+    "url": ""
+  }
+}
