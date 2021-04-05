@@ -5,10 +5,11 @@ using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using ContextMenu = EditorUtils.ContextMenu;
 
 namespace Settings
 {
-    public static class ContextMenu
+    public abstract class SettingsContextMenu : ContextMenu
     {
         private const string ContextDirectory = "Assets/Create/Settings/";
 

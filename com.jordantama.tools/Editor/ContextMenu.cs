@@ -18,5 +18,11 @@ namespace EditorUtils
 
             ProjectWindowUtil.CreateAsset(asset, path);
         }
+        
+        // TODO: Create generic function to create a script from a template (more flexible than existing methods)
+        protected static void CreateScriptFromTemplate(string template)
+        {
+            
+        }
     }
 }
