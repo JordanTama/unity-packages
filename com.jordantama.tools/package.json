@@ -1,0 +1,18 @@
+{
+  "name": "com.jordantama.tools",
+  "version": "1.0.0",
+  "displayName": "Tools",
+  "type": "tool",
+  "unity": "2019.4",
+  "unityRelease": "21f1",
+  "keywords": [
+    "menu",
+    "editor",
+    "context"
+  ],
+  "author": {
+    "name": "Jordan Hamlin",
+    "email": "Jordan.Hamlin6@gmail.com",
+    "url": ""
+  }
+}
