@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "displayName": "Settings",
   "description": "This package allows creation of custom ScriptableObject based settings classes.",
-  "unity": "2019.4",
-  "unityRelease": "21f1",
   "dependencies": {
     "com.jordantama.tools": "1.0.0"
   },
