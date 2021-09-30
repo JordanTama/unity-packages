@@ -1,6 +1,7 @@
-﻿using UnityEditor;
+﻿using JordanTama.Settings.Editor;
+using UnityEditor;
 
-public class #SCRIPTNAME# : Settings.SettingsWindow
+public class #SCRIPTNAME# : SettingsWindow
 {
     protected override string WindowTitle() => "#SETTINGSNAME#";
 

@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Settings
+namespace JordanTama.Settings.Editor
 {
 public abstract class SettingsWindow : EditorWindow
 {

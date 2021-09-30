@@ -6,11 +6,11 @@ using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Settings
+namespace JordanTama.Settings.Editor
 {
-    public static class ContextMenu
+    public abstract class SettingsContextMenu : JordanTama.Tools.Editor.ContextMenu
     {
-        private const string ContextDirectory = "Assets/Create/Settings/";
+        private const string ContextDirectory = "Assets/Create/";
 
         private const string BaseDirectory = "Packages/com.jordantama.settings/ScriptTemplates/";
         
