@@ -5,7 +5,7 @@ public class #SCRIPTNAME# : SettingsWindow
 {
     protected override string WindowTitle() => "#SETTINGSNAME#";
 
-    [MenuItem("Settings/#SCRIPTNAME#")]
+    [MenuItem("Window/Settings/#DISPLAYNAME#")]
     protected static void ShowWindow() => DisplayWindow<#SCRIPTNAME#>();
 
     private void OnGUI()

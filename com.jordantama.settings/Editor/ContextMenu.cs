@@ -58,7 +58,9 @@ namespace JordanTama.Settings.Editor
             content = content.Replace("#SCRIPTNAME#", baseFileNoSpaces);
             content = content.Replace("#TYPE#", baseFileNoSpaces + "Type");
 
-            return CreateScriptAssetWithContent(pathName, content);
+            return CreateScriptAssetWithContent(
+                Path.GetDirectoryName(pathName) + "/" + baseFileNoSpaces + Path.GetExtension(pathName),
+                content);
         }
         
         private static Object CreateSettingsTypeScript(string settingsPathName)
@@ -86,6 +88,7 @@ namespace JordanTama.Settings.Editor
             
             content = content.Replace("#NOTRIM#", "");
             content = content.Replace("#SCRIPTNAME#", scriptName);
+            content = content.Replace("#DISPLAYNAME#", baseFile);
             content = content.Replace("#SETTINGSNAME#", baseFileNoSpaces);
 
             string directory = Path.GetDirectoryName(Path.GetFullPath(settingsPathName));
