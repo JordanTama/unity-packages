@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
 using Object = UnityEngine.Object;
 
-namespace EditorUtils
+namespace JordanTama.Tools.Editor
 {
     public abstract class ContextMenu
     {

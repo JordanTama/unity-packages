@@ -1,5 +1,6 @@
 {
     "name": "jordantama.settings.editor",
+    "rootNamespace": "JordanTama.Settings.Editor",
     "references": [
         "GUID:9a7174163fe8263499923d45a74437c2"
     ],

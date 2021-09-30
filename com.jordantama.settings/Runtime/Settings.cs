@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Settings
+namespace JordanTama.Settings
 {
     public abstract class Settings<T> where T : SettingsType
     {

@@ -1,6 +1,6 @@
 {
     "name": "jordantama.tools.editor",
-    "rootNamespace": "",
+    "rootNamespace": "JordanTama.Tools.Editor",
     "references": [],
     "includePlatforms": [
         "Editor"
