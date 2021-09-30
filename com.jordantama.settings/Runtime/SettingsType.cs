@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Settings
+namespace JordanTama.Settings
 {
     public abstract class SettingsType : ScriptableObject
     {

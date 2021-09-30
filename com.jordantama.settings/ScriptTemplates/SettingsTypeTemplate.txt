@@ -1,4 +1,4 @@
-﻿using Settings;
+﻿using JordanTama.Settings;
 using UnityEngine;
 
 public class #SCRIPTNAME# : SettingsType
