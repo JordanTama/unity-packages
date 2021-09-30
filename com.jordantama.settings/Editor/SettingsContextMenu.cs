@@ -22,12 +22,12 @@ namespace JordanTama.Settings.Editor
         [MenuItem(ContextDirectory + "Settings")]
         private static void NewSettings()
         {
-            CreateCreateRuntimeScripts(SettingsPath,
+            CreateRuntimeScripts(SettingsPath,
                 "New" + Path.GetFileNameWithoutExtension(SettingsPath) + ".cs");
         }
+        
 
-
-        private static void CreateCreateRuntimeScripts(string templatePath, string defaultNewFileName)
+        private static void CreateRuntimeScripts(string templatePath, string defaultNewFileName)
         {
             // Exceptions
             if (templatePath == null)
@@ -95,50 +95,6 @@ namespace JordanTama.Settings.Editor
             Directory.CreateDirectory(directory + "/Editor");
             
             return CreateScriptAssetWithContent(settingsPathName.Replace(baseFile, "Editor/" + scriptName), content);
-        }
-
-        private static Object CreateScriptAssetWithContent(string pathName, string content)
-        {
-            content = SetLineEndings(content, EditorSettings.lineEndingsForNewScripts);
-
-            string fullPath = Path.GetFullPath(pathName);
-            var encoding = new System.Text.UTF8Encoding(true);
-
-            File.WriteAllText(fullPath, content, encoding);
-            AssetDatabase.ImportAsset(pathName);
-
-            return AssetDatabase.LoadAssetAtPath(pathName, typeof(Object));
-        }
-        
-        private static string SetLineEndings(string content, LineEndingsMode lineEndingsMode)
-        {
-            const string windowsLineEndings = "\r\n";
-            const string unixLineEndings = "\n";
-
-            string preferredLineEndings;
-
-            switch (lineEndingsMode)
-            {
-                case LineEndingsMode.OSNative:
-                    if (Application.platform == RuntimePlatform.WindowsEditor)
-                        preferredLineEndings = windowsLineEndings;
-                    else
-                        preferredLineEndings = unixLineEndings;
-                    break;
-                case LineEndingsMode.Unix:
-                    preferredLineEndings = unixLineEndings;
-                    break;
-                case LineEndingsMode.Windows:
-                    preferredLineEndings = windowsLineEndings;
-                    break;
-                default:
-                    preferredLineEndings = unixLineEndings;
-                    break;
-            }
-
-            content = Regex.Replace(content, @"\r\n?|\n", preferredLineEndings);
-
-            return content;
         }
 
         
