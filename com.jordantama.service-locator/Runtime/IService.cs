@@ -1,4 +1,4 @@
-﻿namespace ServiceLocator
+﻿namespace JordanTama.ServiceLocator
 {
     public interface IService { }
 }

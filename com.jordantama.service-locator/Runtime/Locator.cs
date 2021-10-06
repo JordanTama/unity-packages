@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace ServiceLocator
+namespace JordanTama.ServiceLocator
 {
     public class Locator
     {
@@ -24,16 +24,6 @@ namespace ServiceLocator
                 dynamic service = Convert.ChangeType(Activator.CreateInstance(type), type);
                 Register(service);
             }
-        }
-
-        public static T Get<T>() where T : IService
-        {
-            string key = typeof(T).Name;
-
-            if (!instance.services.ContainsKey(key))
-                throw new Exception($"{key} is not a registered service.");
-
-            return (T) instance.services[key];
         }
 
         public static void Register<T>(T service) where T : IService
@@ -60,6 +50,22 @@ namespace ServiceLocator
             }
 
             instance.services.Remove(key);
+        }
+
+        public static T Get<T>() where T : IService
+        {
+            string key = typeof(T).Name;
+
+            if (!instance.services.ContainsKey(key))
+                throw new Exception($"{key} is not a registered service.");
+
+            return (T) instance.services[key];
+        }
+
+        public static bool Get<T>(out T service) where T : IService
+        {
+            service = Get<T>();
+            return service != null;
         }
     }
 }

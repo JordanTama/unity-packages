@@ -1,6 +1,6 @@
 {
     "name": "com.jordantama.service-locator",
-    "rootNamespace": "ServiceLocator",
+    "rootNamespace": "JordanTama.ServiceLocator",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
