@@ -37,6 +37,7 @@ namespace JordanTama.ServiceLocator
             }
 
             instance.services.Add(key, service);
+            service.OnServiceRegistered();
         }
 
         public static void Unregister<T>() where T : IService

@@ -1,4 +1,7 @@
 ﻿namespace JordanTama.ServiceLocator
 {
-    public interface IService { }
+    public interface IService
+    {
+        void OnServiceRegistered();
+    }
 }
