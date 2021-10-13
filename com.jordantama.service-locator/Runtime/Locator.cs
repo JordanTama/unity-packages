@@ -28,7 +28,7 @@ namespace JordanTama.ServiceLocator
 
         public static void Register<T>(T service) where T : IService
         {
-            string key = typeof(T).Name;
+            string key = typeof(T).FullName;
             
             if (instance.services.ContainsKey(key))
             {
@@ -42,7 +42,7 @@ namespace JordanTama.ServiceLocator
 
         public static void Unregister<T>() where T : IService
         {
-            string key = typeof(T).Name;
+            string key = typeof(T).FullName;
 
             if (!instance.services.ContainsKey(key))
             {
@@ -55,7 +55,7 @@ namespace JordanTama.ServiceLocator
 
         public static T Get<T>() where T : IService
         {
-            string key = typeof(T).Name;
+            string key = typeof(T).FullName;
 
             if (!instance.services.ContainsKey(key))
                 throw new Exception($"{key} is not a registered service.");
